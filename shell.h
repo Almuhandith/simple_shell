@@ -15,5 +15,6 @@ extern char **environ;
 char **tokenizer(char *cmd);
 void exec(char **argv);
 void file_stat(char *cmd, char **argv);
+char *_getline();
 
 #endif
