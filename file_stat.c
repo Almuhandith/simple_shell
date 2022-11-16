@@ -14,15 +14,15 @@ void file_stat(char *cmd, char **argv)
 	char *token = NULL, *key = "PATH", *path = NULL;
 	char **env_cpy;
 	struct stat st;
-	
+
 	while (environ[i])
 		i++;
-	
+
 	env_cpy = malloc(sizeof(char *) * i);
 	for (i = 0; environ[i]; i++)
 		env_cpy[i] = strdup(environ[i]);
 	env_cpy[i] = NULL;
-	
+
 	i = 0;
 	while (env_cpy[i])
 	{
@@ -32,7 +32,7 @@ void file_stat(char *cmd, char **argv)
 	}
 	token = strtok(NULL, "\0");
 	token = strtok(token, ":");
-	
+
 	while (token)
 	{
 		path = malloc(sizeof(char) * (strlen(token) + strlen(cmd) + 1));

@@ -8,9 +8,9 @@
 
 char *_getline()
 {
-       	char *cmd = NULL;
+	char *cmd = NULL;
 	size_t n;
-	
+
 	printf(">>> ");
 	if (getline(&cmd, &n, stdin) == -1)
 	{
