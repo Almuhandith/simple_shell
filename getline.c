@@ -18,4 +18,6 @@ char *_getline()
 		exit(0);
 	}
 	tokenizer(cmd);
+
+	return (cmd);
 }

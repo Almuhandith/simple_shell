@@ -31,4 +31,6 @@ char **tokenizer(char *cmd)
 		exec(argv);
 	
 	file_stat(argv[0], argv);
+
+	return (argv);
 }
